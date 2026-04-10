@@ -1,0 +1,79 @@
+\documentclass[11pt, a4paper]{article}
+% Encoding and fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% Bibliography (IEEE Style
+\usepackage{csquotes}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\addbibresource{references.bib}
+% Page Layout
+\usepackage[
+    top=2cm, 
+    bottom=2cm, 
+    left=2.75cm, 
+    right=2.75cm, 
+    footskip=1.0cm,
+    ignoreheadfoot
+]{geometry}
+\usepackage{setspace} % Extra space for readability
+\setstretch{1.10}
+\usepackage{lastpage} % Reference point for last page of doc
+\usepackage{indentfirst} % Indent the first paragraph of a section
+% Maths and symbols
+\usepackage{amsmath, amssymb, amsfonts} % Covers basically all maths
+\usepackage{bm} % Bold maths symbols
+\allowdisplaybreaks % Allows page breaks inside math equations
+% Figures and tables
+\usepackage{graphicx} % Insert images
+\usepackage{float} % Ability to force location of images
+\usepackage{booktabs} % Ruler on tables
+\usepackage{tabularx} % Tables with adjustable-width columns
+\usepackage{multirow} % Merge table cells
+\usepackage{pdfpages} % To include external PDF pages
+% Lists & Headings
+\usepackage{titlesec} % Custom titles
+\usepackage{enumitem} % Better control over lists
+\usepackage{url} % Proper formatting of urls
+
+% --- 7. Custom Formatting & Macros ---
+% \usepackage{mytemplate} % Custom user package (commented out)
+
+% Equation/Figure numbering by section (e.g., 1.1, 1.2)
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+% Custom macros
+\newcommand{\refeq}[1]{(\ref{#1})} % Auto-wrap equations
+
+% Medtadata
+\title{\vspace{20mm} \Huge \textbf{Class Name} \\ \Large Assignment Title}
+\author{Name \\ UniKey \\ SID \\ \normalsize Uni Name}
+\date{Month Year}
+
+% --- Start of Document ---
+\begin{document}
+
+% Title Page
+\pagenumbering{gobble} % Hide page numbers for title
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+% Table of Contents
+\pagenumbering{roman} % Roman numerals for table of contents
+\tableofcontents
+\clearpage
+
+% Main Content
+\pagenumbering{arabic} % Switch to normal numbers
+\pagestyle{plain}
+
+\section{Introduction}
+
+
+\clearpage
+\printbibliography
+
+\end{document}

@@ -1,0 +1,12 @@
+# LaTeX files when compiling
+*.aux
+*.bcf
+*.blg
+*.bbl
+*.fls
+*.xml
+*.gz
+*.out
+*.fdb_latexmk
+*.toc
+*.log
